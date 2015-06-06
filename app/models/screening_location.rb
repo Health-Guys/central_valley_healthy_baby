@@ -7,6 +7,6 @@ class ScreeningLocation < ActiveRecord::Base
   ->(obj) { obj.full_address.present? && obj.changed? }
   
   def full_address
-     [address, city, state, 'US'].compact.join(', ')
+     [street, city, state, 'US'].compact.join(', ')
   end
 end

@@ -1,5 +1,6 @@
 class PrevalancesController < ApplicationController
   before_action :set_prevalance, only: [:show, :edit, :update, :destroy]
+  before_action :set_diseases, only: [:edit, :new, :create, :update]
 
   # GET /prevalances
   # GET /prevalances.json
@@ -65,6 +66,10 @@ class PrevalancesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_prevalance
       @prevalance = Prevalance.find(params[:id])
+    end
+    
+    def set_diseases
+      @diseases = Disease.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

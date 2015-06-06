@@ -1,11 +1,11 @@
 FactoryGirl.define do
   factory :screening_location do
-  street "MyString"
+  street "6200 N 9th street"
   name "MyString"
-  phone "MyString"
-  zipcode "MyString"
+  phone "559-222-2222"
+  zipcode "93710"
   longitude "9.99"
   latitude "9.99"
-  state "MyString"
+  state "CA"
   end
 end

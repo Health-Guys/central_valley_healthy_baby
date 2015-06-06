@@ -1,5 +1,6 @@
 class ScreeningLocationsController < ApplicationController
   before_action :set_screening_location, only: [:show, :edit, :update, :destroy]
+  before_action :set_diseases, only: [:edit, :new, :create, :update]
 
   # GET /screening_locations
   # GET /screening_locations.json
@@ -70,5 +71,9 @@ class ScreeningLocationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def screening_location_params
       params.require(:screening_location).permit(:disease, :street, :name, :phone, :zipcode, :longitude, :latitude, :state)
+    end
+    
+    def set_diseases
+      @diseases = Disease.all
     end
 end
