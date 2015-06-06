@@ -1,5 +1,5 @@
 // This is general file for main css
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:700);
 $palegreen: #DAEAC6;
 
 $bluegreen: #96DDBF;
@@ -15,9 +15,20 @@ $wheat: #FFD987;
 }
 
 /* 'Central Valley Healthy Baby' styling */
+#brandingDiv > img {
+  width: 60%;
+  height: auto;
+  margin-top: 5px;
+}
+
 h3 {
   font-family: 'Roboto Slab', serif;
-  font-weight: 700;
+  font-weight: 'Bold 700';
+}
+
+h3 span {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 'Bold 700';
 }
 
 /* 'Central Valley Healthy Baby' styling */
@@ -32,6 +43,23 @@ h3 {
 }
 #brandingSplash {
   margin-left: 20px;
+}
+
+#brandingDiv {
+  float: left;
+  margin-top: 5px;
+  border: none;
+  background: none;
+}
+
+#search {
+  padding-top: 5px;
+  border: none;
+  background: none;
+}
+
+.navbar {
+  background: white;
 }
 
 /* Space out content a bit */

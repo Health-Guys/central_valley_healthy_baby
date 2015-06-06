@@ -16,6 +16,6 @@ class Disease < ActiveRecord::Base
 
   # TODO: REMOVE FOR ACTUAL SEARCH RATHER THAN THIS INSECURE FUNCTION
   def self.search(query)
-    where("name like ?", "%#{query}%") 
+    where("name like ?", "%#{query}%")
   end
 end

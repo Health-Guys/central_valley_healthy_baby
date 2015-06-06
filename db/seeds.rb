@@ -34,7 +34,7 @@ ScreeningLocation.create(:street => '2071 Herndon Avenue',
 ScreeningLocation.create(:street => '9300 Valley Childrens Place', 
     :name => 'Kaiser Permanente Northern California',
     :city => 'Madera',
-    :homepage => 'https://healthy.kaiserpermanente.org/html/kaiser/index.shtml'
+    :homepage => 'https://healthy.kaiserpermanente.org/html/kaiser/index.shtml',
     :phone => '(559) 353-3000',
     :zipcode => '93636',
     :disease => disease,
@@ -46,5 +46,5 @@ Bldg 200',
     :phone => '(916) 736-6888',
     :zipcode => '95815',
     :disease => disease,
-    :homepage => 'http://www.pndx.com/'
+    :homepage => 'http://www.pndx.com/',
     :state => 'CA')

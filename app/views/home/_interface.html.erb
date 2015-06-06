@@ -1,51 +1,169 @@
     <div class="container">
  
- 
-      <div class="navbar">  
-        <h3><span id="brandHeaderColor1">Central Valley</span> <span id="brandHeaderColor2">Healthy</span> <span id="brandHeaderColor3">Baby</span></h3>
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group form-group-lg">
-          <input type="text" class="form-control" placeholder="Enter a disorder">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div id="brandingDiv">    
+            <img src="http://i.imgur.com/6j55qm0.png"></img>      
           </div>
-          <button type="submit" class="btn btn-default btn-lg">Submit</button>
-        </form>
-      </div><!-- end navbar div -->
+          <form class="navbar-form navbar-right" role="search" id="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search again">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- end '.container-fluid' -->
+      </nav><!-- end navbar div -->
       
       
       <div class="jumbotron">
-        <h1>Disease Goes Here</h1>
-        <p class="lead">Description of disease goes here. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <% if @disease %>
+        <h1><% @disease.name %></h1>
+        <% else %>
+        <h1>No Disorders found</h1>
+        <% end %>
+        
+        <% if @disease %>
+              <p class="lead"><%= @disease.description %></p>
+        <% else %>
+        
+        <p class="lead">Enter Disorder name above</p>
+        <% end %>
+
       </div><!-- end '.jumbotron' div -->
 
       <div class="btn-group btn-group-justified" role="group" aria-label="button group">
-        <div class="btn-group" role="group">
+        <div class="btn-group" role="group" id="infobtn">
           <button type="button" class="btn btn-default" aria-label="info button"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info
           </button>
         </div>
-        <div class="btn-group" role="group">
+        <div class="btn-group" role="group" id="prevalencebtn">
           <button type="button" class="btn btn-default" aria-label="locations button"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Prevalence
           </button>
         </div>
-        <div class="btn-group" role="group">
+        <div class="btn-group" role="group" id="locationsbtn">
           <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true" aria-label="locations button"></span> Locations</button>
         </div>
       </div><!-- end '.btn-group' div -->
 
 
       <div class="row marketing">
-        <div class="col-lg-6">
-          <h4 id="infoHeader">Info</h4>
-          <p >Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <div class="col-lg-6" id= "" >
+          <div id="infoDiv">
+            <h4>Info</h4>
+<% if @disease %>
+    <p>
+      <strong>Name:</strong>
+      <%= @disease.name %>
+    </p>
+    
+    <p>
+      <strong>Link:</strong>
+      <a href="<%= @disease.link %>">homepage</a>
+    </p>
+    
+    <p>
+      <strong>Early signs:</strong>
+      <%= @disease.early_signs %>
+    </p>
+  <% else %>
+    <h1>No Disorders found</h1>
+<% end %> 
 
-          <h4 id="prevalenceHeader">Prevalence</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          </div><!-- end infoDiv -->
+          <div id="prevalenceDiv">
+            <h4>Prevalence</h4>
+          <% if @disease && @disease.prevalances.count > 0 %>
+            <h1>Prevalances</h1>
+    
+            <table class="table table-striped table-with-link-column">
+              <thead>
+                <tr>
+                  <th>Case count</th>
+                  <th>Screened</th>
+                  <th>California region</th>
+                  <th>Disorder percent</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                    <% @disease.prevalances.each do |prevalance| %>
+                      <tr>
+                        <td><%= prevalance.case_count %></td>
+                        <td><%= prevalance.screened %></td>
+                        <td><%= prevalance.california_region %></td>
+                        <td><%= prevalance.disorder_percent %></td>
+                      </tr>
+                     <% end %>
+              <% end %>
+                    
+                  </tbody>
+                </table>
+          </div><!-- end #prevalenceDiv -->
+          
+          <div id="locationsDiv">
+            <h4>Locations</h4>
+                        
+            <h1>Listing screening_locations</h1>
 
+<table class="table table-striped table-with-link-column">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street</th>
+      <th>Phone</th>
+      <th>Zipcode</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>State</th>
+      <th>Homepage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ 
+<% if @disease && @disease.screening_locations.count > 0 %>
+  <tbody>
+    <% @disease.screening_locations.each do |screening_location| %>
+      <tr>
+        <td><%= screening_location.name %></td>
+        <td><%= screening_location.street %></td>
+        <td><%= screening_location.phone %></td>
+        <td><%= screening_location.zipcode %></td>
+        <td><%= screening_location.longitude %></td>
+        <td><%= screening_location.latitude %></td>
+        <td><%= screening_location.state %></td>
+        <td><a href="<%= screening_location.homepage %>">homepage</a></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
 
-          <h4 id="locationsHeader">Locations</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-        </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d102285.60032190249!2d-119.788725!3d36.7603704!3m2!1i1024!2i768!4f13.1!2m1!1sprenatal+care+fresno!5e0!3m2!1sen!2sus!4v1433613341748" width="800" height="600" frameborder="0" style="border:0"></iframe>
+<% end %>
+          </div><!-- end #locationsDiv -->
+        </div><!-- end '.col-lg-6' div -->
       </div><!-- end '.row marketing' div -->
 
 
 
     </div> <!-- end '.container' div -->
+<script>
+    $("#infobtn").click(function(){
+    $("#infoDiv").show();
+    $("#prevalenceDiv").hide();
+    $("#locationsDiv").hide();
+});
+
+    $("#prevalencebtn").click(function(){
+    $("#prevalenceDiv").show();
+    $("#infoDiv").hide();
+    $("#locationsDiv").hide();
+});
+
+    $("#locationsbtn").click(function(){
+    $("#locationsDiv").show();
+    $("#infoDiv").hide();
+    $("#prevalenceDiv").hide();
+});
+</script>
