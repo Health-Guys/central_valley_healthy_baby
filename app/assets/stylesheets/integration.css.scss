@@ -16,7 +16,7 @@ $wheat: #FFD987;
 
 /* 'Central Valley Healthy Baby' styling */
 #brandingDiv > img {
-  width: 60%;
+  width: 50%;
   height: auto;
   margin-top: 5px;
 }
@@ -42,7 +42,7 @@ h3 span {
   color: $peach;
 }
 #brandingSplash {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 #brandingDiv {
@@ -58,8 +58,10 @@ h3 span {
   background: none;
 }
 
-.navbar {
+.btn-splash {
   background: white;
+  margin-right: 10px;
+  height: auto;
 }
 
 /* Space out content a bit */

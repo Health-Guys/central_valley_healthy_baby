@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="brandingSplash">
-		<h3><span id="brandHeaderColor1">Central Valley</span> <span id="brandHeaderColor2">Healthy</span> <span id="brandHeaderColor3">Baby</span></h3>
+        <h3><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></h3>
 	</div>
 	
 	<div class="jumbotron anything">
@@ -20,7 +20,7 @@
           <form class="navbar-form navbar-right" id="search" role="search">
             <%= form_tag(root_path, :method => "get", id: "search") do %>
               <%= text_field_tag :search, params[:search], placeholder: "Enter disorder", :class => 'form-control'  %>
-              <%= button_tag "Search", :name => nil, :class => 'btn btn-default' %>
+              <%= button_tag "Search", :name => nil, :class => 'btn btn-default btn-splash' %>
             <% end %>
           </form>
 	<div class="tfclear"></div>
