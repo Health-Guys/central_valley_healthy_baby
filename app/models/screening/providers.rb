@@ -1,5 +1,5 @@
-require 'blanket'
-require 'hashie'
+# require 'blanket'
+# require 'hashie'
 
 module Screening
   class Providers
