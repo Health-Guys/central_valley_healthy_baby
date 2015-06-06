@@ -13,4 +13,5 @@ API's used:
 * Sopa API (Sopa gem)
 * Geocoder gem
 
-<div><iframe width="500px" title="Newborn Screening Program: Most Common Disorders Diagnosed in California, 2009-2013 (n=2,505,410)" height="425px" src="https://cdph.data.ca.gov/w/adqc-5yhz/2hyq-uids?cur=KmMkHWZtXRQ&from=root" frameborder="0" scrolling="no"><a href="https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz" title="Newborn Screening Program: Most Common Disorders Diagnosed in California, 2009-2013 (n=2,505,410)" target="_blank">Newborn Screening Program: Most Common Disorders Diagnosed in California, 2009-2013 (n=2,505,410)</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
+What started the conversation: 
+![graph][https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz](https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz)
