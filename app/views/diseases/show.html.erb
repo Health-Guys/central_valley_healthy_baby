@@ -19,6 +19,72 @@
   <strong>Early signs:</strong>
   <%= @disease.early_signs %>
 </p>
+<h1>Listing prevalances</h1>
 
-<%= link_to 'Edit', edit_disease_path(@disease) %> |
+<table>
+  <thead>
+    <tr>
+      <th>Case count</th>
+      <th>Disease</th>
+      <th>Screened</th>
+      <th>California region</th>
+      <th>Disorder percent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disease.prevalances.each do |prevalance| %>
+      <tr>
+        <td><%= prevalance.case_count %></td>
+        <td><%= prevalance.disease %></td>
+        <td><%= prevalance.screened %></td>
+        <td><%= prevalance.california_region %></td>
+        <td><%= prevalance.disorder_percent %></td>
+        <!--<td><%= link_to 'Show', prevalance %></td>-->
+        <!--<td><%= link_to 'Edit', edit_prevalance_path(prevalance) %></td>-->
+        <!--<td><%= link_to 'Destroy', prevalance, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Listing screening_locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Disease</th>
+      <th>Street</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Zipcode</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disease.screening_locations.each do |screening_location| %>
+      <tr>
+        <td><%= screening_location.disease %></td>
+        <td><%= screening_location.street %></td>
+        <td><%= screening_location.name %></td>
+        <td><%= screening_location.phone %></td>
+        <td><%= screening_location.zipcode %></td>
+        <td><%= screening_location.longitude %></td>
+        <td><%= screening_location.latitude %></td>
+        <td><%= screening_location.state %></td>
+        <!--<td><%= link_to 'Show', screening_location %></td>-->
+        <!--<td><%= link_to 'Edit', edit_screening_location_path(screening_location) %></td>-->
+        <!--<td><%= link_to 'Destroy', screening_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<!--<%= link_to 'Edit', edit_disease_path(@disease) %> |-->
 <%= link_to 'Back', diseases_path %>

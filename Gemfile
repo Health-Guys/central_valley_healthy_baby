@@ -42,7 +42,9 @@ gem 'soda-ruby', :require => 'soda'
 # gem 'debugger', group: [:development, :test]
 
 gem 'bundler'
+gem 'naught'
 group :development, :test do
+  gem 'awesome_print'
   gem 'rubocop'
   gem 'rspec-rails'
   gem 'factory_girl_rails'

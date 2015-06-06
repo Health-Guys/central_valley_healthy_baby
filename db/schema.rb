@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606082803) do
+ActiveRecord::Schema.define(version: 20150606151333) do
 
   create_table "diseases", force: true do |t|
     t.text     "description"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150606082803) do
     t.string   "case_count"
     t.integer  "disease_id"
     t.float    "screened"
-    t.integer  "california_region"
+    t.string   "california_region"
     t.decimal  "disorder_percent"
     t.datetime "created_at"
     t.datetime "updated_at"
