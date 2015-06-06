@@ -1,6 +1,5 @@
 FactoryGirl.define do
-  factory :screening_location, :class => 'ScreeningLocations' do
-  disease nil
+  factory :screening_location do
   street "MyString"
   name "MyString"
   phone "MyString"
