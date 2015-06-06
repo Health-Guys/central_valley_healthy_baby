@@ -45,7 +45,7 @@ gem 'bundler'
 gem 'naught'
 group :development, :test do
   gem 'awesome_print'
-  gem 'rubocop'
+  # gem 'rubocop'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'sqlite3'

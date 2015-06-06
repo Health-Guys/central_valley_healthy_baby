@@ -62,6 +62,7 @@
       <th>Longitude</th>
       <th>Latitude</th>
       <th>State</th>
+      <th>Homepage</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -77,6 +78,7 @@
         <td><%= screening_location.longitude %></td>
         <td><%= screening_location.latitude %></td>
         <td><%= screening_location.state %></td>
+        <td><%= screening_location.homepage %></td>
         <!--<td><%= link_to 'Show', screening_location %></td>-->
         <!--<td><%= link_to 'Edit', edit_screening_location_path(screening_location) %></td>-->
         <!--<td><%= link_to 'Destroy', screening_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
@@ -85,6 +87,6 @@
   </tbody>
 </table>
 
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d102285.60032190249!2d-119.788725!3d36.7603704!3m2!1i1024!2i768!4f13.1!2m1!1sprenatal+care+fresno!5e0!3m2!1sen!2sus!4v1433613341748" width="800" height="600" frameborder="0" style="border:0"></iframe>
 <!--<%= link_to 'Edit', edit_disease_path(@disease) %> |-->
 <%= link_to 'Back', diseases_path %>
