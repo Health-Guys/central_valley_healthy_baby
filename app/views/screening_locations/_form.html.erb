@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :disease %><br>
-    <%= f.text_field :disease %>
+    <%= f.select :disease_id, collection: @diseases.map{|x|[x.to_s, x.id]} %>
   </div>
   <div class="field">
     <%= f.label :street %><br>

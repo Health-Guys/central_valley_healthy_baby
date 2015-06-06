@@ -70,7 +70,7 @@ class ScreeningLocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def screening_location_params
-      params.require(:screening_location).permit(:disease, :street, :name, :phone, :zipcode, :longitude, :latitude, :state)
+      params.require(:screening_location).permit(:disease_id, :street, :name, :phone, :zipcode, :longitude, :latitude, :state)
     end
     
     def set_diseases
