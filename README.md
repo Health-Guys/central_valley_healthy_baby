@@ -14,4 +14,4 @@ API's used:
 * Geocoder gem
 
 What started the conversation: 
-![graph][https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz](https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz)
+[https://raw.githubusercontent.com/Health-Guys/central_valley_healthy_baby/master/app/assets/images/graph.png](https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz)
