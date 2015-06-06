@@ -1,0 +1,37 @@
+<%= form_for(@prevalance) do |f| %>
+  <% if @prevalance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prevalance.errors.count, "error") %> prohibited this prevalance from being saved:</h2>
+
+      <ul>
+      <% @prevalance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :case_count %><br>
+    <%= f.text_field :case_count %>
+  </div>
+  <div class="field">
+    <%= f.label :disease %><br>
+    <%= f.text_field :disease %>
+  </div>
+  <div class="field">
+    <%= f.label :screened %><br>
+    <%= f.text_field :screened %>
+  </div>
+  <div class="field">
+    <%= f.label :california_region %><br>
+    <%= f.text_field :california_region %>
+  </div>
+  <div class="field">
+    <%= f.label :disorder_percent %><br>
+    <%= f.text_field :disorder_percent %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Disease:</strong>
+  <%= @screening_location.disease %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @screening_location.street %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @screening_location.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @screening_location.phone %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @screening_location.zipcode %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @screening_location.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @screening_location.latitude %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @screening_location.state %>
+</p>
+
+<%= link_to 'Edit', edit_screening_location_path(@screening_location) %> |
+<%= link_to 'Back', screening_locations_path %>

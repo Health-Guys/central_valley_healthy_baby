@@ -1,0 +1,33 @@
+<h1>Listing prevalances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case count</th>
+      <th>Disease</th>
+      <th>Screened</th>
+      <th>California region</th>
+      <th>Disorder percent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prevalances.each do |prevalance| %>
+      <tr>
+        <td><%= prevalance.case_count %></td>
+        <td><%= prevalance.disease %></td>
+        <td><%= prevalance.screened %></td>
+        <td><%= prevalance.california_region %></td>
+        <td><%= prevalance.disorder_percent %></td>
+        <td><%= link_to 'Show', prevalance %></td>
+        <td><%= link_to 'Edit', edit_prevalance_path(prevalance) %></td>
+        <td><%= link_to 'Destroy', prevalance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prevalance', new_prevalance_path %>

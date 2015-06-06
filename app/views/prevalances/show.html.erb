@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Case count:</strong>
+  <%= @prevalance.case_count %>
+</p>
+
+<p>
+  <strong>Disease:</strong>
+  <%= @prevalance.disease %>
+</p>
+
+<p>
+  <strong>Screened:</strong>
+  <%= @prevalance.screened %>
+</p>
+
+<p>
+  <strong>California region:</strong>
+  <%= @prevalance.california_region %>
+</p>
+
+<p>
+  <strong>Disorder percent:</strong>
+  <%= @prevalance.disorder_percent %>
+</p>
+
+<%= link_to 'Edit', edit_prevalance_path(@prevalance) %> |
+<%= link_to 'Back', prevalances_path %>
