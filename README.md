@@ -13,5 +13,10 @@ API's used:
 * Sopa API (Sopa gem)
 * Geocoder gem
 
+API:
+* http://centralvalleybabies.com/prevalances.json
+* http://centralvalleybabies.com/diseases.json
+* http://centralvalleybabies.com/screening_locations.json
+
 What started the conversation: 
 [https://raw.githubusercontent.com/Health-Guys/central_valley_healthy_baby/master/app/assets/images/graph.png](https://cdph.data.ca.gov/Diseases-and-Conditions/Newborn-Screening-Program-Most-Common-Disorders-Di/adqc-5yhz)
