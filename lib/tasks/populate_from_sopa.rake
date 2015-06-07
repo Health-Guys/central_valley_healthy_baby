@@ -15,6 +15,7 @@ namespace :newborn_screened_disorders do
           {:domain => "cdph.data.ca.gov", 
           :app_token => Figaro.env.app_id })
       response = client.get("t6pv-avc4", {:disease_type => 'Primary Congenital Hypothyroidism (CH)'})
+      # TODO: ADD IN MORE NAMES!!
       disease = Disease.find_or_create_by(:name => 'Primary Congenital Hypothyroidism')
       
       puts response.inspect

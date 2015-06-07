@@ -10,9 +10,9 @@ $peach: #FF966F;
 
 $wheat: #FFD987;
 
-#interfacecontrol {
-  display:none;
-}
+// #interfacecontrol {
+//   display:none;
+// }
 
 /* 'Central Valley Healthy Baby' styling */
 #brandingDiv > img {
@@ -50,6 +50,10 @@ h3 span {
   margin-top: 5px;
   border: none;
   background: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 #search {
@@ -119,10 +123,10 @@ body {
 }
 
 /* Button has been removed */
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
+// .jumbotron .btn {
+//   padding: 14px 24px;
+//   font-size: 21px;
+// }
 
 /* Supporting marketing content */
 .marketing {

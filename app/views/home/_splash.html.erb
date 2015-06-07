@@ -7,12 +7,12 @@
  
     <!-- HTML for SEARCH BAR -->
 	<div id="tfheader">
-          <!--<form class="navbar-form navbar-right" id="search" role="search">-->
+          <form class="navbar-form navbar-right" id="search" role="search">
             <%= form_tag(root_path, :method => "get", id: "search") do %>
               <%= text_field_tag :search, params[:search], placeholder: "Enter disorder", :class => 'form-control'  %>
               <%= button_tag "Search", :name => nil, :class => 'btn btn-default btn-splash' %>
             <% end %>
-          <!--</form>-->
+          </form>
 	<div class="tfclear"></div>
 	<!--</div>-->
   </div>
