@@ -6,7 +6,6 @@ namespace :newborn_screened_disorders do
           {:domain => "cdph.data.ca.gov", 
           :app_token => Figaro.env.app_id })
       response = client.get("ktfd-n9nb", {:disorder_type => 'Primary Congenital Hypothyroidism'})
-      ap response
   end
   
     desc 'Import Newborn Diseases by California Regions from cdph.data.ca.gov'
@@ -17,7 +16,8 @@ namespace :newborn_screened_disorders do
           :app_token => Figaro.env.app_id })
       response = client.get("t6pv-avc4", {:disease_type => 'Primary Congenital Hypothyroidism (CH)'})
       disease = Disease.find_or_create_by(:name => 'Primary Congenital Hypothyroidism')
-    #   ap response
+      
+      puts response.inspect
       response.each do |region|
         Prevalance.create do |prevalance|
           prevalance.disease = disease
@@ -27,6 +27,6 @@ namespace :newborn_screened_disorders do
           prevalance.california_region = region.california_region
           end
       end
-    #   ap Prevalance.all
+      puts Prevalance.all.inspect
     end
 end
