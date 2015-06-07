@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   # before_action :set_diseases, :only => [:index]
-  before_action :set_disease, :only => [:index]
+  # before_action :set_disease, :only => [:index]
   def index
     if params[:search]
       @disease = Disease.search(params[:search]).order("created_at DESC").first if params[:search]
