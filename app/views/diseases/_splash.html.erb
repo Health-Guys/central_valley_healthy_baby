@@ -1,22 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Box Example 1</title>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<!-- CSS styles for standard search box -->
+
+
+</head>
+<body>
 	<div id="brandingSplash">
         <h3><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></h3>
 	</div>
-	 <% if @hassearch != 'true' %>
+	<% if @hassearch != 'true' %>
 	<div class="jumbotron anything">
   <!--<div class="container">-->
  
     <!-- HTML for SEARCH BAR -->
 	<div id="tfheader">
-          <!--<form class="navbar-form navbar-right" id="search" role="search">-->
+          <form class="navbar-form navbar-right" id="search" role="search">
             <%= form_tag(root_path, :method => "get", id: "search") do %>
               <%= text_field_tag :search, params[:search], placeholder: "Enter disorder", :class => 'form-control'  %>
               <%= button_tag "Search", :name => nil, :class => 'btn btn-default btn-splash' %>
             <% end %>
-          <!--</form>-->
+          </form>
 	<div class="tfclear"></div>
 	<!--</div>-->
   </div>
-  	 <% end %>
 </div>
+<% end %>
 	<!--<img src="http://i.huffpost.com/gen/1189566/thumbs/h-DIVERSE-BABIES-SITTING-IN-DIAPERS-960x540.jpg" />-->
+		
+</body>
+</html>
 
