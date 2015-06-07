@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'home/index'
-  resources :diseases, :only => [:index, :show]
-  resources :prevalances, :only => [:index, :show]
-  resources :screening_locations, :only => [:index, :show]
+  resources :diseases
+  resources :prevalances
+  resources :screening_locations
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
