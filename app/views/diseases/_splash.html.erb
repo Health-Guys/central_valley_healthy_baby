@@ -1,10 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Box Example 1</title>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<!-- CSS styles for standard search box -->
+
+
+</head>
+<body>
 	<div id="brandingSplash">
-        <!--<h3><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></h3>-->
-      <div class="container-fluid" id="brandingSplash">
-        	<h3><a href="http://centralvalleybabies.com"><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></a></h3>
-      </div><!-- end '.container-fluid' -->
+        <h3><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></h3>
 	</div>
-	 <% if @hassearch != 'true' %>
+	<% if @hassearch != 'true' %>
 	<div class="jumbotron anything">
   <!--<div class="container">-->
  
@@ -19,7 +26,15 @@
 	<div class="tfclear"></div>
 	<!--</div>-->
   </div>
-  	 <% end %>
 </div>
+<% end %>
 	<!--<img src="http://i.huffpost.com/gen/1189566/thumbs/h-DIVERSE-BABIES-SITTING-IN-DIAPERS-960x540.jpg" />-->
+		
+<script>
+    $("#search").click(function(){
+    $("#splashcontrol").hide();
+    $("#brandingSplash").hide();
+    $("#interfacecontrol").show();
+});
+</script>
 

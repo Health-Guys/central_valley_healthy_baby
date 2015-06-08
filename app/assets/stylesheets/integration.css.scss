@@ -1,5 +1,5 @@
 // This is general file for main css
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:700);
 $palegreen: #DAEAC6;
 
 $bluegreen: #96DDBF;
@@ -10,8 +10,64 @@ $peach: #FF966F;
 
 $wheat: #FFD987;
 
-#interfacecontrol {
-  display:none;
+// #interfacecontrol {
+//   display:none;
+// }
+
+/* 'Central Valley Healthy Baby' styling */
+#brandingDiv > img {
+  width: 50%;
+  height: auto;
+  margin-top: 5px;
+}
+
+h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 'Bold 700';
+}
+
+h3 span {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 'Bold 700';
+}
+
+/* 'Central Valley Healthy Baby' styling */
+#brandHeaderColor1 {
+  color: $bluegreen;
+}
+#brandHeaderColor2 {
+  color: $orangered;
+}
+#brandHeaderColor3 {
+  color: $peach;
+}
+#brandingSplash {
+  margin-left: 5px;
+}
+
+#brandingDiv {
+  float: left;
+  margin-top: 5px;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+#search {
+  padding-top: 5px;
+  border: none;
+  background: none;
+}
+
+.btn-splash {
+  background: white;
+  margin-right: 10px;
+  height: auto;
 }
 
 /* Space out content a bit */
@@ -62,15 +118,17 @@ body {
   padding-right: 5px;
 }
 
-/* Main marketing message and sign up button */
+/* Main message*/
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
+
+/* Button has been removed */
+// .jumbotron .btn {
+//   padding: 14px 24px;
+//   font-size: 21px;
+// }
 
 /* Supporting marketing content */
 .marketing {

@@ -1,8 +1,15 @@
     <div class="container">
  
       <nav class="navbar navbar-default">
+        <div class="container-fluid" id="brandingSplash">
+        		<h3><span id="brandHeaderColor1">Central</span> <span id="brandHeaderColor2">Valley</span> <span id="brandHeaderColor3">Babies</span></h3>
+            <form class="navbar-form navbar-right" role="search" id="search">
+              <input type="text" class="form-control" placeholder="Search again">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div><!-- end '.container-fluid' -->
       </nav><!-- end navbar div -->
-
+      
       
       <div class="jumbotron">
         <% if @disease %>
@@ -58,7 +65,7 @@
 <% end %> 
 
           </div><!-- end infoDiv -->
-          <div id="prevalenceDiv">
+          <!--<div id="prevalenceDiv">-->
           <% if @disease && @disease.prevalances.count > 0 %>
             <h1>Prevalances</h1>
     
@@ -86,7 +93,7 @@
                     
                   </tbody>
                 </table>
-          </div><!-- end #prevalenceDiv -->
+          <!--</div><!-- end #prevalenceDiv -->-->
           
           <div id="locationsDiv">
 
@@ -123,7 +130,7 @@
   </tbody>
 </table>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d102285.60032190249!2d-119.788725!3d36.7603704!3m2!1i1024!2i768!4f13.1!2m1!1sprenatal+care+fresno!5e0!3m2!1sen!2sus!4v1433613341748" width="660" height="600" frameborder="0" style="border:0"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d102285.60032190249!2d-119.788725!3d36.7603704!3m2!1i1024!2i768!4f13.1!2m1!1sprenatal+care+fresno!5e0!3m2!1sen!2sus!4v1433613341748" width="800" height="600" frameborder="0" style="border:0"></iframe>
 <% end %>
           </div><!-- end #locationsDiv -->
         </div><!-- end '.col-lg-6' div -->
@@ -133,7 +140,7 @@
 
     </div> <!-- end '.container' div -->
 <script>
-    // $("#prevalenceDiv").hide();
+    $("#prevalenceDiv").hide();
     $("#locationsDiv").hide();
 
     $("#infobtn").click(function(){

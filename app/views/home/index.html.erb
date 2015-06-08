@@ -2,31 +2,6 @@
 <div class="splash" id="splashcontrol">
   <%= render 'splash'%>
 </div>
-<button type="button" class="btn btn-default" aria-label="Left Align" id= "tointerface">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true">INTERFACE</span>
-</button>
-<button type="button" class="btn btn-default" aria-label="Left Align" id= "tosplash">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true">Splash</span>
-</button>
 <div class="interface" id="interfacecontrol">
 <%= render 'interface' %>
 </div>
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-<script>
-  $("#tointerface").click(function(){
-    $("#splashcontrol").hide();
-    $("#interfacecontrol").show();
-});
-
-  $("#tosplash").click(function(){
-    $("#splashcontrol").show();
-    $("#interfacecontrol").hide();
-});
-</script>
